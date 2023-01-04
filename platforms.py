@@ -17,8 +17,12 @@ class Platforms:
         for i in self.rects:
             pygame.draw.rect(self.canvas, self.color, i)
 
-    # Moves each platform in rects forward by the specified amount and redraws them
+    # Moves each platform in rects forward by the specified amount 
     def move(self, amount):
         for i in self.rects:
             i.move_ip(amount,0)
+
+    # Draw each platform    
+    def draw(self):
+        for i in self.rects:
             pygame.draw.rect(self.canvas, self.color, i)
